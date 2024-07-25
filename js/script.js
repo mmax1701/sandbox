@@ -1,6 +1,11 @@
-function makeMessage (name, price) {
+function checkForSpam(message) {
+  let result;
   // Change code below this line
-   const message = `You picked ${name}, price per item is ${price} credits`;
+result = message.toLowerCase().includes('sale') || message.toLowerCase().includes('spam')
   // Change code above this line
-  return message;
-};
+
+  console.log(result);
+  return result;
+}
+
+checkForSpam("[SPAM] How to earn fast money?")
