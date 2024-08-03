@@ -1,11 +1,4 @@
-function checkForSpam(message) {
-  let result;
-  // Change code below this line
-result = message.toLowerCase().includes('sale') || message.toLowerCase().includes('spam')
-  // Change code above this line
+const oldClients = ['Mango', 'Ajax', 'Poly', 'Kiwi'];
+const newClients = ['Peach', 'Houston'];
 
-  console.log(result);
-  return result;
-}
-
-checkForSpam("[SPAM] How to earn fast money?")
+const allClients = oldClients.concat(newClients);
