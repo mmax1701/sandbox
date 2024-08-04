@@ -1,16 +1,34 @@
-function getEvenNumbers(start, end) {
-   // Change code below this line
+// function includes(array, value) {
+//   // Change code below this line
+//     for (i = 0; i < array.length; i+=1) {
+//     if (i === value) {
+//       console.log(true);
+//     return true;
+//     } 
+    
+//     if (i !== value) {
+//       console.log(false);
+//     return false;
+//     } 
+//   }
+// }
+//   // Change code above this line
 
-    const newArr = [];
 
-    for (let i = start; i <= end; i += 1) {
-        if (i % 2 === 0) {
-            newArr.push(i)
+  function includes(array, value) {
+  // Change code below this line
+
+      for (const arr of array) {
+          if (arr === value) {
+              return true;
+          } 
         }
-    }
-  
-return newArr
-    // Change code above this line
-  }
+        
+        return false;
+      
+  // Change code above this line
+}
 
-getEvenNumbers(6, 12) //возвращает [6, 8, 10, 12]
+
+
+includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter") //возвращает true
