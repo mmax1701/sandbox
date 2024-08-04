@@ -1,19 +1,15 @@
-function createArrayOfNumbers(min, max) {
-  const numbers = [];
-    // Change code below this line
-
+function filterArray(numbers, value) {
+   // Change code below this line
     const newArr = [];
-    newArr.push(min, max)
 
-    for (i = min; i <= max; i += 1){
-        numbers.push(i)
+    for (let i = 0; i < numbers.length; i += 1) {
+        if (numbers[i] > value) {
+            newArr.push(numbers[i])
+        }
     }
-   
-
-    console.log(numbers);
+console.log(newArr);
+    return newArr;
+  // Change code above this line
 }
-// Change code above this line
 
-
-createArrayOfNumbers(29, 34)
-// возвращает[29, 30, 31, 32, 33, 34]
+filterArray([12, 24, 8, 41, 76], 20) //возвращает [24, 41, 76]
