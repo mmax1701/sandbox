@@ -1,15 +1,15 @@
-function calculateTotal(number) {
- // Change code below this line
-let sum = 0
-  for (let i = 0; i <= number; i += 1) {
-    sum += i;
-  }
-    return sum;
 
-  // Change code above this line
+
+function calculateTotalPrice(order) {
+    let total = 0;
+    // Change code below this line
+    for (let i = 0; i < order.length; i += 1) {
+        total += order[i];
+    }
+    // Change code above this line
+    console.log(total);
+    return total;
 }
 
-console.log(calculateTotal(1))   //1
-console.log(calculateTotal(3))  //6
-console.log(calculateTotal(7))   //28
-console.log(calculateTotal(24))  //300
+
+calculateTotalPrice([412, 371, 94, 63, 176])
