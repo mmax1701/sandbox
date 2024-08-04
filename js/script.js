@@ -1,22 +1,19 @@
-function findLongestWord(string) {
-  // Change code below this line
-    strArr = string.split(' ');
-    
-    let word = strArr[0];
-    
-    for (let i = 1; i < strArr.length; i += 1) {
+function createArrayOfNumbers(min, max) {
+  const numbers = [];
+    // Change code below this line
 
-        if (word.length < strArr[i].length) {
-            word = strArr[i]
-        } 
+    const newArr = [];
+    newArr.push(min, max)
 
-        
-        
+    for (i = min; i <= max; i += 1){
+        numbers.push(i)
     }
-    return word;
+   
 
-
-  // Change code above this line
+    console.log(numbers);
 }
+// Change code above this line
 
-findLongestWord("May the force be with you")
+
+createArrayOfNumbers(29, 34)
+// возвращает[29, 30, 31, 32, 33, 34]
