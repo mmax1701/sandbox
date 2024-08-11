@@ -1,34 +1,21 @@
-// function includes(array, value) {
-//   // Change code below this line
-//     for (i = 0; i < array.length; i+=1) {
-//     if (i === value) {
-//       console.log(true);
-//     return true;
-//     } 
-    
-//     if (i !== value) {
-//       console.log(false);
-//     return false;
-//     } 
-//   }
-// }
-//   // Change code above this line
+const apartment = {
+  descr: "Spacious apartment in the city center",
+  rating: 4,
+  price: 2153,
+};
+const keys = [];
+const values = [];
+// Change code below this line
 
-
-  function includes(array, value) {
-  // Change code below this line
-
-      for (const arr of array) {
-          if (arr === value) {
-              return true;
-          } 
-        }
-        
-        return false;
-      
-  // Change code above this line
+for (const key in apartment) {
+  keys.push(key)
+  values.push(apartment[key])
 }
 
 
 
-includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter") //возвращает true
+console.log(keys);
+console.log(values);
+
+
+// Перебери объект apartment используя цикл for...in и запиши в массив keys все его ключи, а в массив values все значения его свойств.
