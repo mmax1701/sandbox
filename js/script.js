@@ -5,17 +5,20 @@ const products = [
   { name: "Grip", price: 1200, quantity: 9 },
 ];
 
-function getProductPrice(productName) {
+function getAllPropValues(propName) {
   // Change code below this line
+  
+  let value = [];
 
-  for (const product of products) {
-    if (product.name === productName) {
-      return product.price;
-    }
-  } return null;
+  for (const prop of products) {
     
-  // Change code above this line
+    if (prop.hasOwnProperty(propName)) {
+      value.push(prop[propName])
+    } 
+
+  } return value;
+    // Change code above this line
+    
 }
 
-
-console.log(getProductPrice("Engine")); //возвращает 1200
+console.log(getAllPropValues("price")); //возвращает [1300, 2700, 400, 1200]
