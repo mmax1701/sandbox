@@ -1,10 +1,15 @@
 // Change code below this line
-function add(...args) {
-  let sum = 0;
+function findMatches(first, ...args) {
+  const matches = []; // Don't change this line
+
   for (const arg of args) {
-      sum += arg
-  } return sum;
+    if (first.includes(arg)) {
+     matches.push(arg)
+   }
+ }
+
   // Change code above this line
+  return matches;
 }
 
-console.log(add(12, 4, 11, 48)); //возвращает 75
+console.log(findMatches([4, 89, 17, 36, 2], 8, 17, 89, 27, 2)); //возвращает [17, 89, 2]
