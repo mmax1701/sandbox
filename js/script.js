@@ -1,10 +1,10 @@
-const firstGroupScores = [64, 42, 93];
-const secondGroupScores = [89, 14, 51, 26];
-const thirdGroupScores = [29, 47, 18, 97, 81];
-// Change code below this line
-const allScores = [...firstGroupScores, ...secondGroupScores, ...thirdGroupScores];
-const bestScore = Math.max(...allScores);
-const worstScore = Math.min(...allScores);
+function makeTask(data) {
+  const completed = false;
+  const category = "General";
+  const priority = "Normal";
+  // Change code below this line
+ return {completed, category, priority, ...data}
+  // Change code above this line
+}
 
-console.log(bestScore);
-console.log(worstScore);
+console.log(makeTask({ priority: 'Low', text: 'Choose shampoo' }));
