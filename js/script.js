@@ -1,9 +1,10 @@
 const atTheOldToad = {
   potions: ["Speed potion", "Dragon breath", "Stone skin"],
-  addPotion(potionName) {
+  updatePotionName(oldName, newName) {
     // Change code below this line
 
-    this.potions.push(potionName);
+    let idx = this.potions.indexOf(oldName)
+    return this.potions.splice(idx, 1, newName)
 
     // Change code above this line
   },
@@ -11,4 +12,4 @@ const atTheOldToad = {
 
 console.log(atTheOldToad);
 
-atTheOldToad.addPotion("Invisibility") //в свойстве potions будет массив ["Speed potion", "Dragon breath", "Stone skin", "Invisibility"]
+atTheOldToad.updatePotionName("Dragon breath", "Polymorth") //в свойстве potions будет массив ["Speed potion", "Polymorth", "Stone skin"]
