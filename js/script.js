@@ -1,24 +1,19 @@
 const bookShelf = {
-  // Change code below this line
-  books: ["The last kingdom", "The guardian of dreams"],
-  getBooks() {
-    return "Returning all books";
-  },
-  addBook(bookName) {
-    return `Adding book `;
-  },
-
-  removeBook(bookName) {
-    return `Deleting book ${bookName}`
-  },
+  books: ["The last kingdom", "Haze", "The guardian of dreams"],
   updateBook(oldName, newName) {
-    return `Updating book ${oldName} to ${newName}`
-  }
-  // Change code above this line
+    // Change code below this line
+
+    let idx = this.books.indexOf(oldName)
+    
+
+return this.books.splice(idx, 1, newName)
+
+    // Change code above this line
+  },
 };
 
+console.log(bookShelf);
+// Дополни метод updateBook(oldName, newName) так, чтобы он изменял название книги с oldName на newName в свойстве books.
+// Используй indexOf() для того, чтобы найти нужный элемент массива, и splice() для того чтобы заменить этот элемент
 
-
-
-
-console.log(bookShelf.removeBook("Red sunset")); //возвращает строку "Deleting book Red sunset"
+bookShelf.updateBook("Haze", "Dungeon chronicles"); //значение свойства books это массив ["The last kingdom", "Dungeon chronicles", "The guardian of dreams"]
