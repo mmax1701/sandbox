@@ -1,15 +1,24 @@
-// Change code below this line
-function findMatches(first, ...args) {
-  const matches = []; // Don't change this line
+const bookShelf = {
+  // Change code below this line
+  books: ["The last kingdom", "The guardian of dreams"],
+  getBooks() {
+    return "Returning all books";
+  },
+  addBook(bookName) {
+    return `Adding book `;
+  },
 
-  for (const arg of args) {
-    if (first.includes(arg)) {
-     matches.push(arg)
-   }
- }
-
+  removeBook(bookName) {
+    return `Deleting book ${bookName}`
+  },
+  updateBook(oldName, newName) {
+    return `Updating book ${oldName} to ${newName}`
+  }
   // Change code above this line
-  return matches;
-}
+};
 
-console.log(findMatches([4, 89, 17, 36, 2], 8, 17, 89, 27, 2)); //возвращает [17, 89, 2]
+
+
+
+
+console.log(bookShelf.removeBook("Red sunset")); //возвращает строку "Deleting book Red sunset"
