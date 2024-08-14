@@ -1,14 +1,11 @@
-function registerGuest(name, callback) {
-  console.log(`Реєструємо гостя ${name}.`);
-  callback(name);
+const numbers = [5, 10, 15, 20, 25];
+
+// Класичний for
+for (let i = 0; i < numbers.length; i += 1) {
+  console.log(`Індекс ${i}, значення ${numbers[i]}`);
 }
 
-// Передаємо інлайн функцію greet у якості колбека
-registerGuest("Манго", function greet(name) {
-  console.log(`Ласкаво просимо ${name}.`);
-});
-
-// Передаємо інлайн функцію notify у якості колбека
-registerGuest("Полі", function notify(name) {
-  console.log(`Шановний(а) ${name}, ваш номер буде готовий за 30 хвилин.`);
+// Метод перебирання forEach
+numbers.forEach(function (number, index) {
+  console.log(`Індекс ${index}, значення ${number}`);
 });
