@@ -1,13 +1,14 @@
-const firstArray = [26, 94, 36, 18];
-const secondArray = [17, 61, 23];
-const thirdArray = [17, 26, 94, 61, 36, 23, 18];
-// Change below this line
+const players = {
+  mango: 1270,
+  poly: 468,
+  ajax: 710,
+  kiwi: 244
+};
+const playtimes = Object.values(players); // [1270, 468, 710, 244]
+// Change code below this line
 
-const anyElementInFirstIsEven = firstArray.some(item => item % 2 === 0);
-const anyElementInFirstIsOdd = firstArray.some(item => item % 2 !== 0);
+const totalPlayTime = playtimes.reduce((total, val) => total + val, 0);
+console.log(totalPlayTime);
 
-const anyElementInSecondIsEven = secondArray.some(item => item % 2 === 0);
-const anyElementInSecondIsOdd = secondArray.some(item => item % 2 !== 0);
-
-const anyElementInThirdIsEven = thirdArray.some(item => item % 2 === 0);
-const anyElementInThirdIsOdd = thirdArray.some(item => item % 2 !== 0);
+// Change code above this line
+const averagePlayTime = totalPlayTime / playtimes.length;
