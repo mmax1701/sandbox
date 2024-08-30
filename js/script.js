@@ -1,33 +1,21 @@
-class StringBuilder {
-    constructor(initialValue ) {
-        this.value = initialValue;
+class Car {
+  // Change code below this line
+
+    #brand;
+    
+  constructor({ brand, model, price }) {
+    this.#brand = brand;
+    this.model = model;
+    this.price = price;
+  }
+
+    getBrand() {
+        return this.#brand;
     }
 
-    getValue() {
-        return this.value;
+    changeBrand(newBrand) {
+        return this.#brand = newBrand;
     }
 
-    padEnd(str) {
-       this.value += str;
-    }
-
-    padStart(str) {
-       this.value = str + this.value;
-    }
-
-    padBoth(str) {
-        this.padEnd(str);
-        this.padStart(str)
-    }
+  // Change code above this line
 }
-
-
-// Change code above this line
-const builder = new StringBuilder(".");
-console.log(builder.getValue()); // "."
-builder.padStart("^");
-console.log(builder.getValue()); // "^."
-builder.padEnd("^");
-console.log(builder.getValue()); // "^.^"
-builder.padBoth("=");
-console.log(builder.getValue()); // "=^.^="
