@@ -7,14 +7,19 @@ class Car {
     }
     return 'Success! Price is within acceptable limits'
   }
+
+  static checkPrice(total) {
+    return total;
+   }
   // Change code above this line
-  constructor({ price }) {
+  constructor({ price, total }) {
     this.price = price;
+    this.total = total;
   }
 }
 
-const audi = new Car({ price: 36000 });
-const bmw = new Car({ price: 64000 });
+const audi = new Car({ price: 36000, total: 2 });
+const bmw = new Car({ price: 64000, total: 5 });
 
-console.log(Car.checkPrice(audi.price)); // "Success! Price is within acceptable limits"
-console.log(Car.checkPrice(bmw.price)); // "Error! Price exceeds the maximum"
+console.log(Car.checkPrice(audi.total)); // "Success! Price is within acceptable limits"
+console.log(Car.checkPrice(bmw.total)); // "Error! Price exceeds the maximum"
