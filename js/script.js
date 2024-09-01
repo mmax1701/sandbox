@@ -14,5 +14,8 @@ class User {
 // Change code below this line
 
 class Admin extends User {
-  static AccessLevel = { BASIC: "basic", SUPERUSER: "superuser" }
+  static AccessLevel = {
+    BASIC: "basic",
+    SUPERUSER: "superuser"
+  }
 }
