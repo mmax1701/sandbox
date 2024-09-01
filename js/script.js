@@ -1,4 +1,6 @@
 class User {
+  email;
+
   constructor(email) {
     this.email = email;
   }
@@ -11,11 +13,28 @@ class User {
     this.email = newEmail;
   }
 }
-// Change code below this line
 
 class Admin extends User {
+  // Change code below this line
+
   static AccessLevel = {
     BASIC: "basic",
-    SUPERUSER: "superuser"
+    SUPERUSER: "superuser",
+  };
+
+  constructor({ email, accessLevel }) {
+    super(email ,accessLevel);
+    this.email = email;
+    this.accessLevel = accessLevel;
   }
+
+  // Change code above this line
 }
+
+const mango = new Admin({
+  email: "mango@mail.com",
+  accessLevel: Admin.AccessLevel.SUPERUSER,
+});
+
+console.log(mango.email); // "mango@mail.com"
+console.log(mango.accessLevel); // "superuser"
